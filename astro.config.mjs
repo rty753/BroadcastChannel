@@ -84,4 +84,10 @@ export default defineConfig({
       ],
     },
   },
+  // 添加 server 配置来设置 CSP 头
+  server: {
+    headers: {
+      "Content-Security-Policy": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval';"
+    }
+  }
 })
